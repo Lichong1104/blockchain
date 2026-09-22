@@ -1,0 +1,1 @@
+start cmd /k "cd /d E:\work\Project\Blockchain-management-react&&npm run dev"

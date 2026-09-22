@@ -1,0 +1,43 @@
+.account-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f8ff;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+}
+
+.account-title {
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  background-color: #f5f5f5;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333333;
+  margin: 0;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.account-content {
+  display: flex;
+  flex: 1;
+}
+
+.account-content-item {
+  width: 50%;
+  height: 100%;
+  border: 1px solid gray;
+  border-bottom: none;
+  border-left: none;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: #f0f8ff;
+  transition: background-color 0.3s;
+}
+
+.account-content-item:hover {
+  background-color: #e6e6e6;
+}
