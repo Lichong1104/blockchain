@@ -68,7 +68,7 @@ function Login() {
         }}
       >
         <div className={style.login}>
-          <h2 style={{ fontSize: 38 }}>宁夏师范学院</h2>
+          <h2 style={{ fontSize: 38 }}>四川外国语大学</h2>
           <h2>区块链金融虚拟仿真教学平台</h2>
           {/* <h2>用户登录</h2> */}
           <div className={style.login_box}>
