@@ -3,7 +3,6 @@ import { mySetToken } from "../../utils/tools";
 import { useNavigate } from "react-router-dom";
 import style from "./login.module.css";
 import { Button, message, Space } from "antd";
-import axios from "axios";
 // @ts-ignore
 import NProgress from "nprogress";
 import "nprogress/nprogress.css";
@@ -22,13 +21,6 @@ function Login() {
     });
   };
 
-  const error = () => {
-    messageApi.open({
-      type: "error",
-      content: "用户名或密码输入错误",
-    });
-  };
-
   const warning = () => {
     messageApi.open({
       type: "warning",
@@ -36,74 +28,31 @@ function Login() {
     });
   };
 
-  //登录
+  //登录（本地校验，不调接口：用户名和密码不为空即可登录）
   const loginApi = () => {
     NProgress.start();
     if (username && password) {
-      // axios.defaults.baseURL = "/login";
-      axios.defaults.baseURL = "http://115.28.136.113:8081";
-      axios({
-        url: "/site/login",
-        method: "post",
-        data: {
-          username,
-          password,
-        },
-      }).then((res) => {
-        console.log(res);
-        if (res.data.data[0]) {
-          success();
-          mySetToken(res.data.data[0].edu_user.token);
-          setTimeout(() => {
-            navigate("/admin");
-          }, 800);
-
-          NProgress.done();
-        } else {
-          error();
-          NProgress.done();
-        }
-      });
+      success();
+      mySetToken("local-token-" + Date.now());
+      setTimeout(() => {
+        navigate("/admin");
+      }, 800);
+      NProgress.done();
     } else {
       warning();
       NProgress.done();
     }
   };
 
-  //专家通道登录
+  //专家通道登录（直接登录，不调接口）
   const expertLogin = () => {
     NProgress.start();
-    const expertUsername = "12344321@qq.com";
-    const expertPassword = "123456";
-
-    axios.defaults.baseURL = "http://115.28.136.113:8081";
-    axios({
-      url: "/site/login",
-      method: "post",
-      data: {
-        username: expertUsername,
-        password: expertPassword,
-      },
-    })
-      .then((res) => {
-        console.log(res);
-        if (res.data.data[0]) {
-          success();
-          mySetToken(res.data.data[0].edu_user.token);
-          setTimeout(() => {
-            navigate("/admin");
-          }, 800);
-          NProgress.done();
-        } else {
-          error();
-          NProgress.done();
-        }
-      })
-      .catch((err) => {
-        console.error("专家登录失败:", err);
-        error();
-        NProgress.done();
-      });
+    success();
+    mySetToken("expert-token-" + Date.now());
+    setTimeout(() => {
+      navigate("/admin");
+    }, 800);
+    NProgress.done();
   };
   return (
     <div className={style.loginBox}>
