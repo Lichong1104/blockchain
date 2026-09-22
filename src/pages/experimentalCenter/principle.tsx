@@ -23,7 +23,7 @@ function ExperimentalCenterPrinciple() {
       >
         <div style={{ height: "80vh" }}>
           <iframe
-            src="./public/区块链原理实验二.pdf"
+            src="/区块链原理实验二.pdf"
             width={"100%"}
             height={"100%"}
             frameBorder="0"
