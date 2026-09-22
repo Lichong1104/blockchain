@@ -53,9 +53,7 @@ function LearnCenter() {
           </span>
         </p>
         <a
-          href={
-            "http://edu2.fquantplus.com/classroom/33/courses?token=" + token
-          }
+          href={"http://edu2.fquantplus.com/course/190?token=" + token}
           target="_blank"
         >
           <Button
@@ -103,9 +101,7 @@ function LearnCenter() {
           </span>
         </p>
         <a
-          href={
-            "http://edu2.fquantplus.com/classroom/33/courses?token=" + token
-          }
+          href={"http://edu2.fquantplus.com/course/190?token=" + token}
           target="_blank"
         >
           <Button
@@ -167,9 +163,7 @@ function LearnCenter() {
           </span>
         </p>
         <a
-          href={
-            "http://edu2.fquantplus.com/classroom/33/courses?token=" + token
-          }
+          href={"http://edu2.fquantplus.com/course/190?token=" + token}
           target="_blank"
         >
           <Button
@@ -211,9 +205,7 @@ function LearnCenter() {
           需要能够带领学生在真链上的开放网络中上完成智能合约的创建、部署与调用，提供真正的区块链实战环境，从而达到掌握区块链智能合约的编制方式，并对区块链的运行原理拥有更深层认知的学习效果
         </p>
         <a
-          href={
-            "http://edu2.fquantplus.com/classroom/33/courses?token=" + token
-          }
+          href={"http://edu2.fquantplus.com/course/190?token=" + token}
           target="_blank"
         >
           <Button
